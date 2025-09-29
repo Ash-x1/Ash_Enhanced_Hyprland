@@ -1,0 +1,4 @@
+this command to automatically rename all pictures or files in numerical order: 
+	
+	a=1; for i in *.*; do ext="${i##*.}"; new=$(printf "%02d.%s" "$a" "$ext"); mv -- "$i" "$new"; let a=a+1; done
+

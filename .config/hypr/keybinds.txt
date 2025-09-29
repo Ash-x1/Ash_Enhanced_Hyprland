@@ -1,0 +1,28 @@
+	*||My Hyprland Setup Keybinds||*
+--------------------------
+--------------------------
+ MOD (Windows key) = 🐧
+ Help keybinds menu = 🐧 + H 
+--------------------------
+bind = 🐧 + T  = Terminal
+bind = 🐧 + SHIFT + T = Floating terminal
+bind = 🐧 + Q = kill active window
+bind = 🐧 + O = Exit Hyprland session
+bind = 🐧 + M = Playlist
+bind = 🐧 + SHIFT + M = Stop playlist's audio
+bind = 🐧 + V = Clipboard manager
+bind = 🐧 + B = Brave browser
+bind = 🐧 + C = VScode
+bind = 🐧 + E = File manager 
+bind = 🐧 + I = Toggle floating
+bind = 🐧 + S = Search apps
+bind = 🐧 + W = Wallpapers menu
+bind = 🐧 + J = Emoji menu
+bind = 🐧 + L = Loop control of audio files
+bind = 🐧 + CTRL + P = Power menu
+bind = 🐧 + SHIFT + L = Hyprlock
+bind = 🐧 + N = Swaync notifications menu
+bind = 🐧 + K = Hide Waybar
+bind = 🐧 + SHIFT + K = Show Waybar 
+bind = PRINT = Screenshot a window
+bind = SHIFT + PRINT = Screenshot a selected region

@@ -1,0 +1,128 @@
+
+@import "/home/ash/.cache/wal/colors-waybar.css";
+
+
+@define-color pywal-bar-bg rgba(30, 30, 46, 0); 
+
+@define-color pywal-module-bg alpha(@background, 0.8);
+@define-color pywal-module-fg @foreground;
+@define-color pywal-active-bg alpha(@color4, 0.9);
+@define-color pywal-active-fg alpha(@color0, 0.7);
+@define-color pywal-hover-bg alpha(@color8, 0.4);
+@define-color pywal-hover-fg alpha(@foreground, 0.8);
+
+
+* {
+    border: none;
+    border-radius: 0px;
+    font-family: "CasKaydiaCove Nerd Font";
+    font-weight: bold;
+    font-size: 14px;
+    min-height: 10px;
+}
+
+window#waybar {
+    background: @pywal-bar-bg;
+    border-radius: 15px;
+}
+
+tooltip {
+    background: @pywal-module-bg;
+    color: @pywal-module-fg;
+    border-radius: 7px;
+    border-width: 0px;
+}
+
+#workspaces {
+    padding: 0px;
+    margin: 4px 0px 4px 9px;
+    background: @pywal-module-bg;
+    border-radius: 21px;
+    padding-left: 3px;
+    padding-right: 4px;
+}
+
+#workspaces button {
+    box-shadow: none;
+    text-shadow: none;
+    padding: 0px;
+    border-radius: 9px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 0px;
+    padding-left: 3px;
+    padding-right: 3px;
+    margin-right: 0px;
+    color: @pywal-module-fg;
+    animation: ws_normal 20s ease-in-out 1;
+}
+
+#workspaces button.active {
+    background: @pywal-active-bg;
+    color: @pywal-active-fg;
+    margin-left: 3px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-right: 3px;
+    animation: ws_active 20s ease-in-out 1;
+    transition: all 0.4s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#workspaces button:hover {
+    background: @pywal-hover-bg;
+    color: @pywal-hover-fg;
+    animation: ws_hover 20s ease-in-out 1;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+
+#pulseaudio,
+#tray,
+#cpu,
+#memory,
+#backlight,
+#battery,
+#bluetooth,
+#clock,
+#custom-swaync,
+#custom-cava,
+#custom-playerctl,
+#hyprland-window {
+    color: @pywal-module-fg;
+    background: @pywal-module-bg;
+    opacity: 1;
+    margin: 4px 0px 4px 0px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 21px;
+}
+
+#custom-cava {
+    border-radius: 21px;
+    margin-left: 9px;
+    padding: 5px;
+}
+
+#custom-swaync {
+    border-radius: 21px;
+    margin-right: 9px;
+    padding: 5px;
+}
+
+#hyprland-window {
+    border-radius: 21px;
+    margin-left: 9px;
+    margin-right: 9px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#hyprland-workspaces button.active {
+    background: @pywal-active-bg;
+    color: @pywal-active-fg;
+}
+
+#hyprland-workspaces button {
+    color: @pywal-module-fg;
+}
+

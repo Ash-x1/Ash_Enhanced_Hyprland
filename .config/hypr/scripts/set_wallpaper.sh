@@ -40,9 +40,8 @@ if [ -n "$chosen" ]; then
 
     # Save the wallpaper path (optional)
     echo "$selected_wallpaper" > ~/.cache/last_wallpaper
-
-    # ⬇️⬇️ أضف هذا السطر هنا (المكان المهم)
-    #"$HOME/.config/rofi/rofi-scripts/update-rofi-wall.sh"
+    
+    # Launching the update rofi script colors 
     ~/.config/rofi/rofi-scripts/update-rofi-wall.sh &
 
 

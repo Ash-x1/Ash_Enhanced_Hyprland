@@ -1,0 +1,121 @@
+configuration {
+    modi:                    "drun";
+    show-icons:              true;
+    display-drun:            "";
+    drun-display-format:     "{name}";
+    hover-select:            false;
+    me-select-entry:         "MousePrimary";
+    me-accept-entry:         "!MousePrimary";
+    font:                    "CasKaydiaCove Nerd Font Bold 13";
+}
+
+* {
+    background:              rgba(14, 33, 72, 0.8);         /* TokyoNight base background */
+    background-selected:     rgba(122, 162, 247, 0.25);     /* Light blue for selected */
+    selected:                #E3D095;                       /* Blue-white text */
+    selected-border:         rgba(187, 154, 247, 0.4);      /* Soft purple */
+    text:                    #E3D095;                       /* Primary text color */
+    subtext:                 rgba(192, 202, 245, 0.7);      /* Subtext */
+}
+
+window {
+    location:                center;
+    anchor:                  center;
+    fullscreen:              false;
+    width:                   600px;
+    border:                  0px solid;
+    border-radius:           14px;
+    /*background-color:      transparent;*/
+    cursor:                  "pointer";
+}
+
+mainbox {
+    spacing:                 10px;
+    padding:                 10px;
+    border-radius:           12px;
+    background-color:        transparent;
+    children:                [ "inputbar", "listview" ];
+}
+
+inputbar {
+    spacing:                 8px;
+    padding:                 10px;
+    border-radius:           10px;
+    background-color:        rgba(192, 202, 245, 0.15);     /* Light transparent bar */
+    text-color:              #E3D095;
+    children:                [ "prompt", "entry" ];
+}
+
+prompt, entry {
+    background-color:        transparent;
+    text-color:              inherit;
+    padding:                 0px 0px 0px 5px;
+}
+
+entry {
+    cursor:                  text;
+    placeholder:             " search";
+}
+
+listview {
+    columns:                 2;
+    lines:                   6;
+    dynamic:                 true;
+    cycle:                   true;
+    background-color:        rgba(26, 27, 38, 0.8);         /* Consistent with Waybar */
+    spacing:                 5px;
+    border-radius:           8px;
+    padding:                 5px;
+}
+
+element {
+    padding:                 8px;
+    border-radius:           10px;
+    background-color:        rgba(255, 255, 255, 0.03);     /* Subtle hover base */
+    text-color:              #c0caf5;
+    orientation:             horizontal;
+    cursor:                  pointer;
+}
+
+element selected.normal {
+    background-color:        rgba(122, 162, 247, 0.35);     /* Selected background */
+    border-radius:           10px;
+    text-color:              #c0caf5;
+}
+
+element-icon {
+    background-color:        transparent;
+    size:                    28;
+    padding:                 0px 10px 0px 0px;
+}
+
+element-text {
+    background-color:        transparent;
+    border-radius:           6px;
+    padding:                 4px;
+    text-color:              #E3D095;
+    vertical-align:          0.5;
+    horizontal-align:        0.0;
+}
+
+scrollbar {
+    width:                   4px ;
+    border-radius:           5px;
+    handle-color:            rgba(122, 162, 247, 0.7);      /* Blue scrollbar handle */
+    handle-width:            6px;
+}
+
+error-message, textbox {
+    background-color:        rgba(26, 27, 38, 0.85);        /* Same base */
+    text-color:              #f7768e;                       /* Tokyo red for emphasis */
+    border-radius:           6px;
+}
+
+element.alternate.normal {
+    background-color: rgba(255, 255, 255, 0.03);
+    text-color:       #E3D095;
+}
+element.normal.normal {
+    background-color: rgba(255, 255, 255, 0.03);
+    text-color:       #E3D095;
+}

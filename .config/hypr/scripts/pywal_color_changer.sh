@@ -17,3 +17,7 @@ killall -SIGUSR1 kitty
 
 # reload hyprland borders/colors
 hyprctl reload
+
+# generate rofi colors
+"$HOME/.config/rofi/rofi-scripts/wal-rofi-gen.sh"
+

@@ -30,6 +30,9 @@ if [ -n "$chosen" ]; then
     # Apply pywal theme from image
     wal -i "$selected_wallpaper" --backend wal
 
+    # Generate rofi colors automatically
+    "$HOME/.config/rofi/rofi-scripts/wal-rofi-gen.sh"
+
     # Reload waybar (if using pywal colors there)
     pkill waybar
     sleep 0.3
@@ -37,4 +40,13 @@ if [ -n "$chosen" ]; then
 
     # Save the wallpaper path (optional)
     echo "$selected_wallpaper" > ~/.cache/last_wallpaper
+
+    # ⬇️⬇️ أضف هذا السطر هنا (المكان المهم)
+    #"$HOME/.config/rofi/rofi-scripts/update-rofi-wall.sh"
+    ~/.config/rofi/rofi-scripts/update-rofi-wall.sh &
+
+
+    # Optional notification
+    notify-send "🎨 Wallpaper & Rofi colors updated!"
 fi
+

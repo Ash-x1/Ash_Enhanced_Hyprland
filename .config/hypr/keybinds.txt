@@ -17,7 +17,7 @@ bind = 🐧 + E = File manager
 bind = 🐧 + I = Toggle floating
 bind = 🐧 + S = Search apps
 bind = 🐧 + W = Wallpapers menu
-bind = 🐧 + J = Emoji menu
+bind = 🐧 + Z = Emoji menu
 bind = 🐧 + L = Loop control of audio files
 bind = 🐧 + CTRL + P = Power menu
 bind = 🐧 + SHIFT + L = Hyprlock

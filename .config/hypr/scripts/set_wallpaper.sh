@@ -18,7 +18,7 @@ for img in "$WALLPAPER_DIR"/*.{jpg,png}; do
 done
 
 # Pass the list of wallpapers to Rofi with icons
-chosen=$(echo -en "$choices" | rofi -dmenu -p "" -theme-str 'element-icon { size: 80px; }')
+chosen=$(echo -en "$choices" | rofi -dmenu -p "Wallpaper" -theme-str 'element-icon { size: 80px; }')
 
 # If a wallpaper is selected, set it and apply pywal
 if [ -n "$chosen" ]; then
@@ -38,12 +38,11 @@ if [ -n "$chosen" ]; then
     sleep 0.3
     waybar &
 
-    # Save the wallpaper path (optional)
+    # Save the wallpaper path
     echo "$selected_wallpaper" > ~/.cache/last_wallpaper
-    
-    # Launching the update rofi script colors 
-    ~/.config/rofi/rofi-scripts/update-rofi-wall.sh &
 
+    # Make the image ready for rofi magebox instantly
+    ln -sf "$selected_wallpaper" "$HOME/.config/hypr/current_wallpaper"
 
     # Optional notification
     notify-send "🎨 Wallpaper & Rofi colors updated!"

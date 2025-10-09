@@ -2,16 +2,16 @@
 
 emoji_file="$HOME/.config/rofi/rofi-scripts/emojis/all_emojis.txt"
 
-# Search for "emoji + text"
+# عرض كل السطر (إيموجي + نصوص) للبحث
 chosen=$(cat "$emoji_file" | rofi -dmenu -i -p "Select Emoji")
 
 if [[ -n "$chosen" ]]; then
-	#Pick only the 1st column
+    # استخرج العمود الأول فقط (الإيموجي نفسه)
     emoji=$(echo "$chosen" | awk '{print $1}')
 
-    # Copy the emoji only
+    # انسخ الإيموجي فقط
     echo -n "$emoji" | wl-copy
 
-    # 
+    # اكتب الإيموجي في الحقل الحالي
     wtype "$emoji"
 fi

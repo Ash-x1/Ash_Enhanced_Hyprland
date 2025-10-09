@@ -9,11 +9,11 @@ include ~/.cache/wal/colors-kitty.conf
 
 
 # font_family FantasqueSansM Nerd Font Mono Bold
-# font_family MartianMono Nerd Font Propo Regular
-font_size 16.0
-# bold_font auto
-# italic_font auto
-# bold_italic_font auto
+font_family MartianMono Nerd Font Propo Regular
+font_size 17.0
+bold_font auto
+italic_font auto
+bold_italic_font auto
 
 background_opacity 0.9
 dynamic_background_opacity 1
@@ -38,11 +38,3 @@ selection_background none
 # foreground #dddddd
 # background #000000
 cursor #dddddd
-
-
-# BEGIN_KITTY_FONTS
-font_family      family="MartianMono Nerd Font"
-bold_font        auto
-italic_font      auto
-bold_italic_font auto
-# END_KITTY_FONTS

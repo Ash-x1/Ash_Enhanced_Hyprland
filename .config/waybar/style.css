@@ -5,11 +5,11 @@
    ========================================= */
 @define-color pywal-bar-bg rgba(30, 30, 46, 0.0);
 
-/* الخلفية الأساسية للوحدات الآن ديناميكية (مستمدة من ألوان Pywal) */
+/*Dynamic colors from pywal*/
 @define-color pywal-module-bg alpha(mix(@color0, @color4, 0.45), 0.75);
 @define-color pywal-module-fg @foreground;
 
-/* ألوان الحالات */
+/*Colors*/
 @define-color pywal-active-bg alpha(@color4, 0.9);
 @define-color pywal-active-fg alpha(@color0, 0.8);
 @define-color pywal-hover-bg alpha(mix(@color5, @color2, 0.5), 0.5);
@@ -58,9 +58,7 @@ tooltip {
 	border-radius: 9px;
 	color: @pywal-module-fg;
 	padding: 4px 10px;
-	/* ثابت في كل الحالات */
 	margin: 0 3px;
-	/* ثابت في كل الحالات */
 	transition: background 0.4s ease, color 0.4s ease;
 }
 

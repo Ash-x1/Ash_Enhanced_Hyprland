@@ -11,7 +11,7 @@ bind = 🐧 + O = Exit Hyprland session
 bind = 🐧 + M = Playlist
 bind = 🐧 + SHIFT + M = Stop playlist's audio
 bind = 🐧 + V = Clipboard manager
-bind = 🐧 + B = Brave browser
+bind = 🐧 + B = Browser
 bind = 🐧 + C = VScode
 bind = 🐧 + E = File manager 
 bind = 🐧 + I = Toggle floating

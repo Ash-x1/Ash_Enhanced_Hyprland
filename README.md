@@ -52,19 +52,3 @@ Recommended directories that may contain scripts used by this setup:
 
 ---
 
-## Notes & Tips
-
-* If any numbered list appears inside a scrollable box with a copy button on GitHub, that usually means the list lines were indented with a tab or multiple leading spaces, which GitHub treats as a code block. Make sure list items have no leading tabs. Use plain lines for top-level list items and indent nested lists by 4 spaces.
-
-* Ensure the file is saved as plain text with Unix line endings (`LF`) and encoded in UTF-8.
-
-* Example of correct list formatting (no leading tab):
-
-```markdown
-1. First item
-2. Second item
-    1. Nested first
-    2. Nested second
-```
-
-This file is formatted to display correctly on GitHub.

@@ -1,47 +1,70 @@
 # Ash_Enhanced_Hyprland
-My personal *Hyrpland setup and dotfiles*, the overall design have more focus on dynamic colors using pywal (there are other tools out there but pywal seems to be more familiar), the requirements to have the same setup are: 
 
-	1. Nerd font: ["MartianMono Nerd Font"](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/MartianMono.zip)
+My personal *Hyprland setup and dotfiles*. The overall design focuses on dynamic colors using **pywal** (there are other tools, but pywal is used in these dotfiles). The requirements to reproduce the same setup are:
 
-	2. Mouse cursor: [Future-cyan cursors](https://www.gnome-look.org/p/1465392)
+1. **Nerd font:** [MartianMono Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/MartianMono.zip)
 
-	3. Icons pack: [Dracula icons](https://www.gnome-look.org/p/1541561)
+2. **Mouse cursor:** [Future-cyan cursors](https://www.gnome-look.org/p/1465392)
 
-	4. Gtk theme: [Abyss ink](https://www.gnome-look.org/p/1324963)
+3. **Icons pack:** [Dracula icons](https://www.gnome-look.org/p/1541561)
 
-	5. Install **Pywal** (you can choose another tool but you will need to change the scripts in this dotfiles that uses pywal to adapt with you favorite tool)
+4. **GTK theme:** [Abyss ink](https://www.gnome-look.org/p/1324963)
 
-	6. Install **Rofi** *to show apps menu and wallpaper menu and music/audio menu and power-menu*
+5. **Install Pywal** (you can choose another tool but you will need to update the scripts in these dotfiles that use pywal).
 
-		6.1. Add your wallpapers to this path "~/Pictures/Wallpapers"
+6. **Install Rofi** — used for apps menu, wallpaper menu, music/audio menu and power menu.
 
-		6.2. Add your audio files to this path "~/Music/My-Plylist"
+   1. Add your wallpapers to `~/Pictures/Wallpapers`.
+   2. Add your audio files to `~/Music/My-Playlist`.
 
-	7. Install **Wofi** (used in this setup to show keybindings menu to help you remember what keybinds you use to do this or that, you can edit the file that contains the keybinds in this path "~/.config/hypr/keybinds.txt")
+7. **Install Wofi** — used in this setup to show keybindings menu. Edit the file containing keybinds at `~/.config/hypr/keybinds.txt`.
 
-	8. Install **Cava** (optional), if you want to have the cava module to work in waybar when you lay some audio
+8. **Install Cava** (optional) — required if you want the cava module to work in waybar while audio is playing.
 
-	9. Install **playerctl** so you can see audio informations in waybar (optional, you can skip it if you want to keep waybar clean)
+9. **Install playerctl** (optional) — to show audio information in waybar (skip if you prefer a minimal waybar).
 
-	10. Install **NetworkManager-applet** to control your networks (you can use another tool for that if you want but you will need to adjust the waybar config.jsonc file and style.css to adapt with the new tool's module)
+10. **Install NetworkManager-applet** — to control networks. If you use a different network tool, adjust `waybar/config.jsonc` and `style.css` to match the module of your chosen tool.
 
-	11. Install **SwayNC** for notification center (optional, you can use dunst or any other notification daemon, but again you will need to adjust the waybar config.jsonc file to remove swaync module and add your favorite notfication's daemon module)
+11. **Install SwayNC** for the notification center (optional). You may use `dunst` or another notification daemon, but then update `waybar/config.jsonc` to remove the swaync module and add your preferred notification module.
 
-	12. Install **Pavucontrol**
+12. **Install Pavucontrol**.
 
-	13. Activate the script files in the the recommended diretories below to activate the scripts using this command "chmod +x *.sh", those are the directories that contains the scripts (**WARNING: Some of thos scripts meant for generating and applying pywal colors, if you don't use pywal at all or if you use another tools please feel free to adjust them as you want**):
+13. **Make the script files executable** in the recommended directories by running:
 
-		13.1. ~/.config/hypr/scripts
+```bash
+chmod +x ~/.config/hypr/scripts/*.sh
+chmod +x ~/.config/rofi/rofi-scripts/*.sh
+chmod +x ~/.config/waybar/scripts/*.sh
+chmod +x ~/.config/wal/*.sh
+```
 
-		13.2. ~/.config/rofi/rofi-scripts 
+> **Warning:** Some of these scripts generate and apply pywal color schemes. If you don't use pywal or you use another tool, adjust the scripts accordingly.
 
-		13.3. ~/.config/waybar 
+Recommended directories that may contain scripts used by this setup:
 
-		13.4. ~/.config/waybar/scripts
+* `~/.config/hypr/scripts`
+* `~/.config/rofi/rofi-scripts`
+* `~/.config/waybar`
+* `~/.config/waybar/scripts`
+* `~/.config/wal`
 
-		13.5. ~/.config/wal 
-
-	14. Install **zsh** and [starship](https://starship.rs/guide/) (optional, you can use fish or whatever shell you like)
-
+14. **Install zsh** and [starship](https://starship.rs/guide/) (optional — you may use `fish` or any shell you prefer).
 
 ---
+
+## Notes & Tips
+
+* If any numbered list appears inside a scrollable box with a copy button on GitHub, that usually means the list lines were indented with a tab or multiple leading spaces, which GitHub treats as a code block. Make sure list items have no leading tabs. Use plain lines for top-level list items and indent nested lists by 4 spaces.
+
+* Ensure the file is saved as plain text with Unix line endings (`LF`) and encoded in UTF-8.
+
+* Example of correct list formatting (no leading tab):
+
+```markdown
+1. First item
+2. Second item
+    1. Nested first
+    2. Nested second
+```
+
+This file is formatted to display correctly on GitHub.
